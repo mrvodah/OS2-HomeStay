@@ -43,8 +43,9 @@ public class PhongAdapter extends RecyclerView.Adapter<PhongAdapter.PhongViewHol
             public void onClick(View v) {
                 if(list.get(position).getTinhtrang() == 0){
 
-                    Intent intent = new Intent(context, DatPhongActivity.class);
+                    Intent intent = new Intent(context, ChiTietPhongActivity.class);
                     intent.putExtra("phong", list.get(position));
+                    intent.putExtra("id", position);
                     context.startActivity(intent);
 
                 }
